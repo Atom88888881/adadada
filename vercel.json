@@ -2,14 +2,30 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "api/image.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/app.py"
+      "src": "/image",
+      "dest": "/api/image.py"
+    },
+    {
+      "src": "/video",
+      "dest": "/api/image.py"
+    },
+    {
+      "src": "/gif", 
+      "dest": "/api/image.py"
+    },
+    {
+      "src": "/logs",
+      "dest": "/api/image.py"
+    },
+    {
+      "src": "/",
+      "dest": "/api/image.py"
     }
   ]
 }
